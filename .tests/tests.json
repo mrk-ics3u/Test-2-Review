@@ -1,0 +1,339 @@
+{
+  "title": "Test 2 Review",
+  "review": true,
+  "cases": [],
+  "challenges": [
+    {
+      "title": "Exercise 1 - Motto Maker",
+      "file": "1_motto_maker.py",
+      "cases": [
+        {
+          "type": "output",
+          "name": "Team motto, four words",
+          "stdin": [
+            "We love to code"
+          ],
+          "expect": [
+            "Enter a motto: We l0ve t0 c0de",
+            "wE LOVE TO CODE",
+            "4",
+            "Team motto",
+            "We lo"
+          ]
+        },
+        {
+          "type": "output",
+          "name": "Personal motto, two words",
+          "stdin": [
+            "go Blue go"
+          ],
+          "expect": [
+            "Enter a motto: g0 Blue g0",
+            "GO bLUE GO",
+            "3",
+            "Personal motto",
+            "go Bl"
+          ]
+        },
+        {
+          "type": "output",
+          "name": "One word",
+          "stdin": [
+            "Stop"
+          ],
+          "expect": [
+            "Enter a motto: St0p",
+            "sTOP",
+            "1",
+            "Personal motto",
+            "Stop"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Exercise 2 - Box Calculator",
+      "file": "2_box_calculator.py",
+      "cases": [
+        {
+          "type": "output",
+          "name": "Decimal side, good label",
+          "stdin": [
+            "Books",
+            "3.5"
+          ],
+          "expect": [
+            "Enter a label: Enter a side length: 12.25",
+            "4.95",
+            "4",
+            "3",
+            "Label OK",
+            "Capitalized"
+          ]
+        },
+        {
+          "type": "output",
+          "name": "Negative side, bad label",
+          "stdin": [
+            "tape 2",
+            "-2"
+          ],
+          "expect": [
+            "Enter a label: Enter a side length: 4.0",
+            "2.83",
+            "2",
+            "2",
+            "Letters only",
+            "Not capitalized"
+          ]
+        },
+        {
+          "type": "output",
+          "name": "Lowercase label",
+          "stdin": [
+            "lamp",
+            "7.25"
+          ],
+          "expect": [
+            "Enter a label: Enter a side length: 52.56",
+            "10.25",
+            "8",
+            "7",
+            "Label OK",
+            "Not capitalized"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Exercise 3 - Step Counter",
+      "file": "3_step_counter.py",
+      "cases": [
+        {
+          "type": "output",
+          "name": "Three days",
+          "stdin": [
+            "4200",
+            "8100",
+            "6550",
+            "0"
+          ],
+          "expect": [
+            "Steps: Steps: Steps: Steps: 3",
+            "4200",
+            "6550",
+            "[4200, 6550, 8100]",
+            "Lowest: 4200",
+            "Highest: 8100",
+            "Total: 18850"
+          ]
+        },
+        {
+          "type": "output",
+          "name": "One day",
+          "stdin": [
+            "12000",
+            "0"
+          ],
+          "expect": [
+            "Steps: Steps: 1",
+            "12000",
+            "12000",
+            "[12000]",
+            "Lowest: 12000",
+            "Highest: 12000",
+            "Total: 12000"
+          ]
+        },
+        {
+          "type": "output",
+          "name": "Repeated values",
+          "stdin": [
+            "3000",
+            "9000",
+            "3000",
+            "7500",
+            "0"
+          ],
+          "expect": [
+            "Steps: Steps: Steps: Steps: Steps: 4",
+            "3000",
+            "7500",
+            "[3000, 3000, 7500, 9000]",
+            "Lowest: 3000",
+            "Highest: 9000",
+            "Total: 22500"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Exercise 4 - Playlist",
+      "file": "4_playlist.py",
+      "cases": [
+        {
+          "type": "output",
+          "name": "Song skipped",
+          "stdin": [
+            "Believer",
+            "Shake It Off",
+            "done",
+            "Believer"
+          ],
+          "expect": [
+            "Add song: Add song: Add song: ['Intro', 'Believer', 'Shake It Off']",
+            "Skip song: ['Intro', 'Shake It Off']",
+            "Removed: Shake It Off",
+            "Songs left: 1"
+          ]
+        },
+        {
+          "type": "output",
+          "name": "Song not found",
+          "stdin": [
+            "Hello",
+            "done",
+            "Yesterday"
+          ],
+          "expect": [
+            "Add song: Add song: ['Intro', 'Hello']",
+            "Skip song: Song not found",
+            "Removed: Hello",
+            "Songs left: 1"
+          ]
+        },
+        {
+          "type": "output",
+          "name": "Intro skipped",
+          "stdin": [
+            "Halo",
+            "Fireflies",
+            "done",
+            "Intro"
+          ],
+          "expect": [
+            "Add song: Add song: Add song: ['Intro', 'Halo', 'Fireflies']",
+            "Skip song: ['Halo', 'Fireflies']",
+            "Removed: Fireflies",
+            "Songs left: 1"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Exercise 5 - Library Shelf",
+      "file": "5_library_shelf.py",
+      "cases": [
+        {
+          "type": "output",
+          "name": "Runs out of Holes",
+          "stdin": [
+            "Holes",
+            "Holes",
+            "Holes",
+            "Dune",
+            "done"
+          ],
+          "expect": [
+            "Borrow: Borrow: Borrow: No copies left",
+            "Borrow: Borrow: Holes: 0",
+            "Wonder: 1",
+            "Dune: 1",
+            "Copies available: 2"
+          ]
+        },
+        {
+          "type": "output",
+          "name": "Removed and missing books",
+          "stdin": [
+            "Hatchet",
+            "Wonder",
+            "Matilda",
+            "done"
+          ],
+          "expect": [
+            "Borrow: Not in library",
+            "Borrow: Borrow: Not in library",
+            "Borrow: Holes: 2",
+            "Wonder: 0",
+            "Dune: 2",
+            "Copies available: 4"
+          ]
+        },
+        {
+          "type": "output",
+          "name": "Nothing borrowed",
+          "stdin": [
+            "done"
+          ],
+          "expect": [
+            "Borrow: Holes: 2",
+            "Wonder: 1",
+            "Dune: 2",
+            "Copies available: 5"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Exercise 6 - Points Table",
+      "file": "6_points_table.py",
+      "cases": [
+        {
+          "type": "output",
+          "name": "Every team scores",
+          "stdin": [
+            "Red",
+            "Blue",
+            "Red",
+            "Gold",
+            "Green",
+            "done"
+          ],
+          "expect": [
+            "Winner: Winner: Winner: Winner: Winner: Winner: Red: 6",
+            "Blue: 3",
+            "Green: 3",
+            "Gold: 3",
+            "Top score: 6",
+            "Every team has points"
+          ]
+        },
+        {
+          "type": "output",
+          "name": "Unknown team",
+          "stdin": [
+            "Blue",
+            "Purple",
+            "Blue",
+            "done"
+          ],
+          "expect": [
+            "Winner: Winner: Unknown team",
+            "Winner: Winner: Red: 0",
+            "Blue: 6",
+            "Green: 0",
+            "Gold: 0",
+            "Top score: 6",
+            "Some teams have no points"
+          ]
+        },
+        {
+          "type": "output",
+          "name": "No games played",
+          "stdin": [
+            "done"
+          ],
+          "expect": [
+            "Winner: Red: 0",
+            "Blue: 0",
+            "Green: 0",
+            "Gold: 0",
+            "Top score: 0",
+            "Some teams have no points"
+          ]
+        }
+      ]
+    }
+  ]
+}
